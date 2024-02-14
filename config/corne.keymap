@@ -1,0 +1,19 @@
+/* source keypos definitions */
+#include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
+
+/* map Corne's extra keys */
+#define X_LT &none
+#define X_LM &none
+#define X_LB &none
+#define X_LH &none
+
+#define X_RT &none
+#define X_RM &none
+#define X_RB &none
+#define X_RH &none
+
+/* activate bluetooth */
+#define CONFIG_WIRELESS 1
+
+/* source the main keymap */
+#include "base.keymap"
