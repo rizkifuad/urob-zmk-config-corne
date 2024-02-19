@@ -1,3 +1,15 @@
+# C2K's fork of urob's zmk-config for corne 42
+*Work in progress. Keymap image below does not apply to this repo
+### Noteable Mods
+- qwerty
+- BSPC right thumb
+- ESC extra right thumb
+- TAB left thumb
+- sym layer instead of combos
+- no vertical combos
+- left homerow arrows
+
+
 # urob's zmk-config
 
 This is my personal [ZMK firmware](https://github.com/zmkfirmware/zmk/) configuration.
