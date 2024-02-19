@@ -22,7 +22,7 @@
 
 
 /******** PERSONAL COMBOS ********/
-ZMK_COMBO(esc,   &kp ESC,       LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(bspc,  &kp BSPC,      LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(ret,   &kp RETURN,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(under, &kp UNDER,     RT1 RT2,     DEF NAV NUM, COMBO_TERM_SLOW)
