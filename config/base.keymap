@@ -212,7 +212,7 @@ ZMK_BEHAVIOR(nav_5_down, macro,
     bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP>;
 )
 SIMPLE_MORPH(qnav_down, LALT, &kp DOWN, &nav_5_down)
-SIMPLE_MORPH(qnav_up, LALT, &kp up, &nav_5_up)
+SIMPLE_MORPH(qnav_up, LALT, &kp UP, &nav_5_up)
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
