@@ -201,6 +201,18 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
+ZMK_BEHAVIOR(nav_5_up, macro,
+    wait-ms = <10>;
+    tap-ms = <5>;
+    bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
+)
+ZMK_BEHAVIOR(nav_5_down, macro,
+    wait-ms = <10>;
+    tap-ms = <5>;
+    bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP>;
+)
+SIMPLE_MORPH(qnav_down, LALT, &kp DOWN, &nav_5_down)
+SIMPLE_MORPH(qnav_up, LALT, &kp up, &nav_5_up)
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
@@ -231,7 +243,7 @@ ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     ___           ___           &kp LS(TAB)   &swapper      ___             X_MT     &kp PG_UP     CANCEL        ___           NAV_DEL       ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &sk LCTRL      &sk LALT      &sk LGUI     &sk LSHFT     ___             X_MM     &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT       X_RM
+    X_LM     &sk LCTRL      &sk LALT      &sk LGUI     &sk LSHFT     ___             X_MM     &kp PG_DN     NAV_LEFT      &qnav_down      &qnav_up        NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     ___           ___           ___           ___           ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        &kp RET         X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
