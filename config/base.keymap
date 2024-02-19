@@ -201,15 +201,15 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-ZMK_BEHAVIOR(nav_5_up, macro,
-    wait-ms = <10>;
-    tap-ms = <5>;
-    bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
+ZMK_BEHAVIOR(nav_8_up, macro,
+    wait-ms = <5>;
+    tap-ms = <3>;
+    bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
 )
-ZMK_BEHAVIOR(nav_5_down, macro,
-    wait-ms = <10>;
-    tap-ms = <5>;
-    bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP>;
+ZMK_BEHAVIOR(nav_8_down, macro,
+    wait-ms = <5>;
+    tap-ms = <3>;
+    bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP>;
 )
 SIMPLE_MORPH(qnav_down, ALT, &kp DOWN, &nav_5_down)
 SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_5_up)
