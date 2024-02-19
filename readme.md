@@ -2,13 +2,15 @@
 *Work in progress. Keymap image below does not apply to this repo
 ### Noteable Mods
 - qwerty
-- BSPC right thumb
-- ESC extra right thumb
-- TAB left thumb
-- sym layer instead of combos
+- Mac Homerow Mods (CAGS/⎈⎇◆⇧)
+- BSPC/NUM right thumb
+- ESC/FN extra left thumb
+- TAB/NAV inner left thumb
+- BSPC/SYM right thumb layer instead of combos
 - no vertical combos
-- left homerow arrows
-
+- right homerow arrows
+- ALT+⬆/⬇ arrow skip 5 macro
++ a lot of other little tweaks
 
 # urob's zmk-config
 
