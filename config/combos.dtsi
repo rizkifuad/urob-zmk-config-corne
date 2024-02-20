@@ -11,8 +11,8 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
+#define COMBO_TERM_FAST 30
+#define COMBO_TERM_SLOW 35
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 #define HRC_TAB    &hml         LA(LCTRL) TAB
