@@ -319,7 +319,7 @@ ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     ___           &kp BSLH      &kp TILDE     &kp GRAVE     ___             X_MT     &kp STAR      &kp LBRC      &kp RBRC      &kp PRCNT     &kp CARET       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM   &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  ___          X_MM     &kp EQUAL     &hmr_lpar_lt  &hmr_rpar_gt  &hml RALT PLUS &hml RCTRL MINUS X_RM
+    X_LM   &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  ___          X_MM     &kp EQUAL     &hml RSHFT LBRC &hml RGUI RBRC  &hml RALT PLUS &hml RCTRL MINUS X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     ___           ___           ___           &kp LT         &kp GT         X_MB     &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &kp PIPE        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
