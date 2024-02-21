@@ -17,8 +17,8 @@
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 #define HRC_TAB    &hml         LA(LGUI) TAB
 #define HRC_REPEAT &hml_repeat  LS(LGUI) 0
-#define HRC_LPAR   &hmr_lpar_lt RS(RGUI) 0
-#define HRC_RPAR   &hmr_rpar_gt RA(RGUI) 0
+#define HRC_LPAR   &hmr_lpar_lt RS(LGUI) 0
+#define HRC_RPAR   &hmr_rpar_gt LA(LGUI) 0
 
 
 /******** PERSONAL COMBOS ********/
