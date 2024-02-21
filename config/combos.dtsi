@@ -15,20 +15,24 @@
 #define COMBO_TERM_SLOW 50
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
-#define HRC_TAB    &hml         LA(LCTRL) TAB
-#define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
-#define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-#define HRC_RPAR   &hmr_rpar_gt LA(LCTRL) 0
+#define HRC_TAB    &hml         LA(LGUI) TAB
+#define HRC_REPEAT &hml_repeat  LS(LGUI) 0
+#define HRC_LPAR   &hmr_lpar_lt RS(RGUI) 0
+#define HRC_RPAR   &hmr_rpar_gt RA(RGUI) 0
 
 
 /******** PERSONAL COMBOS ********/
-ZMK_COMBO(bspc,  &kp BSPC,      LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(ret,   &kp RETURN,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST)
+#define HRC_RET    &hml         LS(LGUI) RETURN
+#define HRC_BSPC   &hml         LA(LGUI) BSPC
+
+ZMK_COMBO(bspc,  HRC_BSPC,   LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(ret,   HRC_RET,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST)
+
 
 ZMK_COMBO(under, &kp UNDER,     RT1 RT2,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(equals, &kp EQUAL,    LT1 LT2,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(colon, &kp COLON,     LT3 LT2,     DEF NAV NUM, COMBO_TERM_SLOW)
-
+ZMK_COMBO(minus, &kp MINUS,     RM3 RM4,     DEF NAV NUM, COMBO_TERM_SLOW)
 
 
 /* Horizontal combos - left hand */
