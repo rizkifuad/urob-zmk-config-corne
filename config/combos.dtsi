@@ -11,7 +11,7 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <200>;
 
-#define COMBO_TERM_EXTRA_FAST 10
+#define COMBO_TERM_EXTRA_FAST 15
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 50
 
