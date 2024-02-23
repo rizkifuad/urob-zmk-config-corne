@@ -9,8 +9,9 @@
 
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <150>;
+#define COMBO_HOOK require-prior-idle-ms = <200>;
 
+#define COMBO_TERM_EXTRA_FAST 10
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 50
 
@@ -29,7 +30,7 @@ ZMK_COMBO(bspc,  HRC_BSPC,   LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(ret,   HRC_RET,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(under, &kp UNDER,     RT1 RT2,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(equals, &kp EQUAL,    LT1 LT2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(equals, &kp EQUAL,    LT1 LT2,     DEF NAV NUM, COMBO_TERM_EXTRA_FAST)
 ZMK_COMBO(colon, &kp COLON,     LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(minus, &kp MINUS,     RM3 RM4,     DEF NAV NUM, COMBO_TERM_SLOW)
 
