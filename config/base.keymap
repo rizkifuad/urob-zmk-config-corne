@@ -147,7 +147,7 @@ ZMK_BEHAVIOR(window_swapper, tri_state,
 
 // App tab swapper
 ZMK_BEHAVIOR(tab_swapper, tri_state,
-    bindings = <&kt LALT(LGUI)>, <&kp RIGHT>, <&kt LALT(LGUI)>;
+    bindings = <&kt LA(LGUI)>, <&kp RIGHT>, <&kt LA(LGUI)>;
     ignored-key-positions = <LB2>;
 )
 
