@@ -148,7 +148,7 @@ ZMK_BEHAVIOR(window_swapper, tri_state,
 // App tab swapper
 ZMK_BEHAVIOR(tab_swapper, tri_state,
     bindings = <&kt LA(LGUI)>, <&kp RIGHT>, <&kt LA(LGUI)>;
-    ignored-key-positions = <LB2>;
+    ignored-key-positions = <LM2>;
 )
 
 // Sticky layer + sticky shift (workaround for issue #1421)
@@ -253,9 +253,9 @@ ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     ___            &kp F6        &kp LS(TAB)  &window_swapper ___           X_MT     &kp PG_UP     CANCEL        ___           NAV_DEL       ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &sk LCTRL      &sk LALT      &sk LGUI     &sk LSHFT     ___             X_MM     &kp PG_DN     NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
+    X_LM     &sk LCTRL      &sk LALT    &hml LGUI LEFT &hml LSHFT tab_swapper ___    X_MM     &kp PG_DN     NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___            &kp LEFT     &tab_swapper  ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        &kp RET         X_RB
+    X_LB     ___           ___            ___          ___           ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        &kp RET         X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     ___           NAV_BSPC                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
