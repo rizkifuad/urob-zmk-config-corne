@@ -148,7 +148,7 @@ ZMK_BEHAVIOR(window_swapper, tri_state,
 
 // App tab swapper
 ZMK_BEHAVIOR(tab_swapper, tri_state,
-    bindings = <&kt LA(LGUI)>, <&kp RIGHT>, <&kt LA(LGUI)>;
+    bindings = <&kt LA>, <&kt LGUI>, <&kp RIGHT>, <&kt LGUI>, <&kt LA>;
     ignored-key-positions = <LB2>;
 )
 
@@ -226,7 +226,18 @@ SIMPLE_MORPH(qnav_down, ALT, &kp DOWN, &nav_8_down)
 SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_8_up)
 
 // TODO: &kp LC(W) on nav need to un toggle alt gui then toggle back on
+ZMK_BEHAVIOR(nav_close, macro,
+    wait-ms = <5>;
+    tap-ms = <3>;
+    bindings = <&kt LA>, <&kt LGUI>, <&kp LC(W)>, <&kt LGUI>, <&kt LA>;
+)
+ZMK_BEHAVIOR(nav_recent_tab, macro,
+    wait-ms = <5>;
+    tap-ms = <3>;
+    bindings = <&kt LA>, <&kt LGUI>, <&kp LC(LS(T))>, <&kt LGUI>, <&kt LA>;
+)
 // TODO: Nav toggle on return kp
+
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
@@ -254,11 +265,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___            &kp F4        &kp LS(TAB)  &window_swapper ___           X_MT     &kp PG_UP     CANCEL        ___           NAV_DEL       ___             X_RT
+    X_LT     ___           &kp F4        &kp LS(TAB)   &window_swapper ___           X_MT     ___           &kp INS       &kp PG_DN     &kp PG_UP     ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &sk LCTRL      &hml LALT F4  &hml LGUI F5 &hml LSHFT F6 ___             X_MM     &kp PG_DN     NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
+    X_LM     &sk LCTRL     &hml LALT F4  &hml LGUI F5  &hml LSHFT F6 ___             X_MM     ___           NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp LC(LS(T))  &kp LC(W)     &kp LEFT     &tab_swapper  ___             X_MB     &kp INS       &kp TAB       ___           ___           &kp RET         X_RB
+    X_LB     &nav_recent_tab &nav_close  &kp LEFT      &tab_swapper  ___             X_MB     ___           &kp TAB       NAV_DEL       CANCEL        ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &kp RETURN    NAV_BSPC                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
