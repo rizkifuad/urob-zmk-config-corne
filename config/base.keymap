@@ -233,12 +233,12 @@ SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_8_up)
 
 // TODO: &kp LC(W) on nav need to un toggle alt gui then toggle back on
 ZMK_BEHAVIOR(nav_close, macro,
-    wait-ms = <0>;
+    wait-ms = <20>;
     tap-ms = <5>;
     bindings = <&kt_la_gui>, <&kp LC(W)>, <&kt_la_gui>;
 )
 ZMK_BEHAVIOR(nav_recent_tab, macro,
-    wait-ms = <0>;
+    wait-ms = <20>;
     tap-ms = <5>;
     bindings = <&kt_la_gui>, <&kp LC(LS(T))>, <&kt_la_gui>;
 )
