@@ -46,6 +46,7 @@
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 
 /* Homerow mods */
@@ -224,6 +225,9 @@ ZMK_BEHAVIOR(nav_8_up, macro,
 SIMPLE_MORPH(qnav_down, ALT, &kp DOWN, &nav_8_down)
 SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_8_up)
 
+// TODO: &kp LC(W) on nav need to un toggle alt gui then toggle back on
+// TODO: Nav toggle on return kp
+
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
@@ -235,7 +239,6 @@ SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_8_up)
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
@@ -245,7 +248,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH        X_RB
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                         &lt FN ESC   &lt_spc SYM 0  &lt NAV TAB     X_MH     &kp RETURN   &lt NUM BSPC  &smart_shft
+                                         &lt FN ESC   &lt_spc NAV 0  &lt SYM TAB     X_MH     &kp RETURN   &lt NUM BSPC  &smart_shft
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -255,9 +258,9 @@ ZMK_LAYER(nav,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &sk LCTRL      &hml LALT F4  &hml LGUI F5 &hml LSHFT F6 ___             X_MM     &kp PG_DN     NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp LC(LS(T))  &kp LC(W)     &kp LEFT     &tab_swapper  ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        &kp RET         X_RB
+    X_LB     &kp LC(LS(T))  &kp LC(W)     &kp LEFT     &tab_swapper  ___             X_MB     &kp INS       &kp TAB       ___           ___           &kp RET         X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     ___           NAV_BSPC                                                  X_RH
+    X_LH                                               ___           ___             X_MH     &kp RETURN    NAV_BSPC                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -323,13 +326,13 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &kp BSLH      &kp TILDE     &kp GRAVE     ___             X_MT     &kp STAR      &kp LBRC      &kp RBRC      &kp PRCNT     &kp CARET       X_RT
+    X_LT     ___           ___           ___           ___           ___             X_MT     ___           &kp STAR      &kp FSLH      &kp TILDE     &kp GRAVE       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM   &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  ___          X_MM     &kp EQUAL     &hml RSHFT LBRC &hml RGUI RBRC  &hml RALT PLUS &hml RCTRL MINUS X_RM
+    X_LM   &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  ___          X_MM     ___           &hml RSHFT AMPS &hml RGUI PIPE  &hml RALT PLUS &hml RCTRL MINUS X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           &kp LT         &kp GT         X_MB     &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &kp PIPE        X_RB
+    X_LB     ___           ___           ___           ___           ___             X_MB     ___           &kp CARET     &kp PRCNT     &kp BSLH      &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     ___           &kp BSPC                                                  X_RH
+    X_LH                                               ___           ___             X_MH     &kp RETURN    &kp BSPC                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
