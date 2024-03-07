@@ -155,7 +155,7 @@ ZMK_BEHAVIOR(kt_la_gui, macro,
 // App tab swapper
 ZMK_BEHAVIOR(tab_swapper, tri_state,
     bindings = <&kt_la_gui>, <&kp RIGHT>, <&kt_la_gui>;
-    ignored-key-positions = <LB2>;
+    ignored-key-positions = <LB2>, <LB3>, <LB4>;
 )
 
 // Sticky layer + sticky shift (workaround for issue #1421)
