@@ -5,8 +5,8 @@
 - Mac Homerow Mods (CAGS/⎈⎇◆⇧)
 - BSPC/NUM right thumb
 - ESC/FN extra left thumb
-- TAB/NAV inner left thumb
-- BSPC/SYM right thumb layer instead of combos
+- TAB/SYM inner left thumb. SYM layer instead of combos
+- SPC/NAV left thumb 
 - no vertical combos
 - right homerow arrows
 - ALT+⬆/⬇ arrow skip 5 macro
