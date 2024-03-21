@@ -254,6 +254,9 @@ ZMK_BEHAVIOR(nav_recent_tab, macro,
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
 #define VOL_DOWN    &hmr LCTRL C_VOL_DN
 
+#define BACK       &kp LG(LBKT)  // back
+#define FORWARD    &kp LG(RBKT)  // forward
+
 /* Keymap */
 
 
@@ -273,7 +276,7 @@ ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     F16           &kp F4        &kp LS(TAB)   &window_swapper ___           X_MT     ___           &kp INS       &kp PG_DN     &kp PG_UP     ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM  &hml LCTRL RG(LBKT) &hml LALT RG(RBKT) &hml LGUI F5  &hml LSHFT F6 ___     X_MM     ___           NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
+    X_LM  &hml LCTRL FORWARD &hml LALT FORWARD &hml LGUI F5  &hml LSHFT F6 ___       X_MM     ___           NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &nav_recent_tab &nav_close  &kp LEFT      &tab_swapper  ___             X_MB     ___           &kp TAB       NAV_DEL       CANCEL        ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
