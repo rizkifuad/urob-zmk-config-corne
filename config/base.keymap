@@ -216,20 +216,20 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-ZMK_BEHAVIOR(nav_8_down, macro,
+ZMK_BEHAVIOR(nav_5_down, macro,
     wait-ms = <5>;
     tap-ms = <3>;   
-    bindings = <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>;
+    bindings = <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>;
 )
-ZMK_BEHAVIOR(nav_8_up, macro,
+ZMK_BEHAVIOR(nav_5_up, macro,
     wait-ms = <5>;
     tap-ms = <3>;
-    bindings = <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>;
+    bindings = <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>;
 )
-SIMPLE_MORPH(qnav_down, ALT, &kp DOWN, &nav_8_down)
-SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_8_up)
+SIMPLE_MORPH(qnav_down, ALT, &kp DOWN, &nav_5_down)
+SIMPLE_MORPH(qnav_up, ALT, &kp UP, &nav_5_up)
 
-// TODO: &kp LC(W) on nav need to un toggle alt gui then toggle back on
+// TODO: fix. still not working
 ZMK_BEHAVIOR(nav_close, macro,
     wait-ms = <20>;
     tap-ms = <5>;
@@ -241,7 +241,7 @@ ZMK_BEHAVIOR(nav_recent_tab, macro,
     bindings = <&kt_la_gui>, <&kp LC(LS(T))>, <&kt_la_gui>;
 )
 // TODO: Nav toggle on return kp
-
+// TODO: change smart shift to sticky caps lock
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
@@ -272,11 +272,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     BACK          FORWARD       &kp LS(TAB)   &window_swapper ___           X_MT     ___           &kp INS       &kp PG_DN     &kp PG_UP     ___             X_RT
+    X_LT     BACK          FORWARD       &kp LS(TAB)   &window_swapper ___           X_MT     ___           &kp INS       NAV_DEL       CANCEL        ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM    &hml LCTRL F16 &hml LALT F4  &hml LGUI F5  &hml LSHFT F6 ___             X_MM     ___           NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &nav_recent_tab &nav_close  &kp LEFT      &tab_swapper  ___             X_MB     ___           &kp TAB       NAV_DEL       CANCEL        ___             X_RB
+    X_LB     &kp LG(LS(T)) &kp LG(W)     &kp LEFT      &tab_swapper  ___             X_MB     ___           &kp TAB       &kp PG_DN     &kp PG_UP     ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &kp RETURN    NAV_BSPC                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -284,9 +284,9 @@ ZMK_LAYER(nav,
 
 ZMK_LAYER(fn,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp F12       &kp F7        &kp F8        &kp F9        ___             X_MT     ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    ___             X_RT
+    X_LT     &kp F12       &kp F7        &kp F8        &kp F9        ___             X_MT     ___           ___           ___           ___           ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LCTRL F11 &hml LALT F4  &hml LGUI F5 &hml LSHFT F6 ___             X_MM     ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___             X_RM
+    X_LM     &hml LCTRL F11 &hml LALT F4  &hml LGUI F5 &hml LSHFT F6 ___             X_MM     ___           &kp C_PREV    VOL_DOWN      &kp C_VOL_UP  &kp C_NEXT      X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp F10       &kp F1        &kp F2        &kp F3        ___             X_MB     PIN_APP       PIN_WIN       DSK_MGR       ___           ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
