@@ -252,8 +252,14 @@ ZMK_BEHAVIOR(nav_recent_tab, macro,
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
 #define VOL_DOWN    &hmr LCTRL C_VOL_DN
 
-#define BACK       &kp LG(LBKT)  // back
-#define FORWARD    &kp LG(RBKT)  // forward
+
+ZMK_BEHAVIOR(back, tap,
+    bindings = <&kp LG(LBKT)>;
+)
+
+ZMK_BEHAVIOR(forward, tap,
+    bindings = <&kp LG(RBKT)>;
+)
 
 /* Keymap */
 
@@ -272,7 +278,7 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     BACK          FORWARD       &kp LS(TAB)   &window_swapper ___           X_MT     ___           &kp INS       NAV_DEL       CANCEL        ___             X_RT
+    X_LT     &back         &forward       &kp LS(TAB)   &window_swapper ___           X_MT     ___           ___           NAV_DEL       CANCEL        ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM    &hml LCTRL F16 &hml LALT F4  &hml LGUI F5  &hml LSHFT F6 ___             X_MM     ___           NAV_LEFT      &qnav_down    &qnav_up      NAV_RIGHT       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
