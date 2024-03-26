@@ -2,9 +2,9 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
 /* map Corne's extra keys */
-#define X_LT &kp LC(D)
-#define X_LM &kp LC(S)
-#define X_LB &kp LC(F)
+#define X_LT &none
+#define X_LM &none
+#define X_LB &none
 #define X_LH &none
 
 #define X_RT &none
