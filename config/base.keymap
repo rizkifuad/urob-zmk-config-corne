@@ -346,9 +346,9 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp LG(LS(T)) &kp LG(W)     &kp F2        &kp F3        &kp LG(T)       X_MT     ___           &kp STAR      &kp FSLH      &kp TILDE     &kp GRAVE       X_RT
+    X_LT     ___           &kp LG(W)     &kp F2        &kp F3        &kp LG(T)       X_MT     ___           &kp STAR      &kp FSLH      &kp TILDE     &kp GRAVE       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM   &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  ___          X_MM     ___           &hmr RSHFT AMPS &hmr RGUI PIPE  &hmr RALT PLUS &hmr RCTRL MINUS X_RM
+    X_LM   &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR &kp LG(LS(T)) X_MM     ___           &hmr RSHFT AMPS &hmr RGUI PIPE  &hmr RALT PLUS &hmr RCTRL MINUS X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp RG(F)     &kp RG(S)     &kp RG(Z)     &kp RG(RS(Z)) ___             X_MB     ___           &kp CARET     &kp PRCNT     &kp BSLH      &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
