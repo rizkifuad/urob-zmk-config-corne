@@ -25,6 +25,7 @@
 /******** PERSONAL COMBOS ********/
 #define HRC_RET    &hml         LS(LGUI) RETURN
 #define HRC_BSPC   &hml         LA(LGUI) BSPC
+#define HRC_ALL    &hml         LA(LSHFT) LG(A)
 
 ZMK_COMBO(bspc,  HRC_BSPC,   LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(ret,   HRC_RET,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST)
@@ -34,6 +35,7 @@ ZMK_COMBO(equals, &kp EQUAL,    LT1 LT2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(colon, &kp COLON,     LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(minus, &kp MINUS,     RM3 RM4,     DEF NAV NUM, COMBO_TERM_SLOW)
 
+ZMK_COMBO(select_all, HRC_ALL, LM1 LM3,    DEF NAV NUM, COMBO_TERM_SLOW)
 
 /* Horizontal combos - left hand */
 // ZMK_COMBO(mouse, &smart_mouse,  LT3 LT1,     DEF NAV NUM, COMBO_TERM_FAST)
@@ -44,7 +46,6 @@ ZMK_COMBO(minus, &kp MINUS,     RM3 RM4,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(cut,   &kp LG(X),   LB3 LB1,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(copy,  &kp LG(C),   LB3 LB2,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(paste, &kp LG(V),   LB2 LB1,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(select_all, &kp LG(A), LM4 LM3,  DEF NAV NUM, COMBO_TERM_SLOW)
 
 
 /* Horizontal combos - right hand */
