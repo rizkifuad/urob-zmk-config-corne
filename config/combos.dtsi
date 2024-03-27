@@ -44,7 +44,7 @@ ZMK_COMBO(minus, &kp MINUS,     RM3 RM4,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(cut,   &kp LG(X),   LB3 LB1,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(copy,  &kp LG(C),   LB3 LB2,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(paste, &kp LG(V),   LB2 LB1,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(select_all, &kp LG(A), LB4 LB3,  DEF NAV NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(select_all, &kp LG(A), LM4 LM3,  DEF NAV NUM, COMBO_TERM_SLOW)
 
 
 /* Horizontal combos - right hand */
