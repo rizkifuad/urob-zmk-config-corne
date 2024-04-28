@@ -79,8 +79,8 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_R THUMBS)    // "    "   "   "
 
 &mt { MT_CORE };
 
-#define NAV_LEFT  0  &kp LEFT    // tap: left  | long-tap: beginning of line
-#define NAV_RIGHT 0  &kp RIGHT   // tap: right | long-tap: end       of line
+#define NAV_LEFT  &kp LEFT    // tap: left  | long-tap: beginning of line
+#define NAV_RIGHT &kp RIGHT   // tap: right | long-tap: end       of line
 #define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
 #define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
