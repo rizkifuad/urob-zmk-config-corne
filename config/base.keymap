@@ -29,8 +29,6 @@
 #define XXX &none
 #define ___ &trans
 
-#define PSCRN PRINTSCREEN
-
 /* Global settings */
 
 #define QUICK_TAP_MS 75
