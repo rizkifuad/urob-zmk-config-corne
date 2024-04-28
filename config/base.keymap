@@ -74,8 +74,8 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_R THUMBS)    // "    "   "   "
 #define MT_CORE \
     flavor = "hold-preferred"; \
     tapping-term-ms = <200>; \
+    quick-tap-ms = <200>; \
     hold-trigger-key-positions = <0>;
-// quick-tap-ms = <200>; \
 
 &mt { MT_CORE };
 
@@ -161,7 +161,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH        X_RB
 //╰──────╯ ╰───────────────────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                         &smart_shft   &mt LGUI BSPC  &lt SYM ESCAPE    X_MH     &lt NUM TAB   &lt_spc FN 0  &kp RETURN
+                                         &smart_shft   &mt LGUI BSPC  &lt SYM ESC    X_MH     &lt NUM TAB   &lt_spc FN 0  &kp RETURN
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
