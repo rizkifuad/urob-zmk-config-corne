@@ -126,7 +126,7 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
 ZMK_BEHAVIOR(lt_spc, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&spc_morph>;
 )
@@ -170,9 +170,9 @@ ZMK_LAYER(base,
 //╭──────╮ ╭─────────────────┬────────────────┬──────────────────┬──────────────────┬────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp EXCL          &kp AT           &kp HASH            &kp DLLR          &kp PRCNT      X_MT     &kp CARET     &kp AMPS       &kp STAR     &kp LPAR      &kp RPAR        X_RT
 //├──────┤ ├─────────────────┼────────────────┼──────────────────┼──────────────────┼────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI GRAVE   &hml LALT DQT    &hml LCTRL UNDER   &hml LSHFT PLUS    &kp PIPE       X_MM     NAV_LEFT      &qnav_down     &qnav_up     NAV_RIGHT     &kp PIPE        X_RM
+    X_LM     &hml LGUI TILDE   &hml LALT DQT    &hml LCTRL UNDER   &hml LSHFT PLUS    &kp PIPE       X_MM     NAV_LEFT      &qnav_down     &qnav_up     NAV_RIGHT     &kp PIPE        X_RM
 //├──────┤ ├─────────────────┼────────────────┼──────────────────┼──────────────────┼────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp TILDE         &kp SQT          &kp MINUS          &kp EQUAL          &kp BSLH       X_MB     &kp LBRC      &kp RBRC      &kp LBKT      &kp RBKT      &kp BSLH        X_RB
+    X_LB     &kp GRAVE         &kp SQT          &kp MINUS          &kp EQUAL          &kp BSLH       X_MB     &kp LBRC      &kp RBRC      &kp LBKT      &kp RBKT      &kp BSLH        X_RB
 //╰──────╯ ╰─────────────────┼────────────────┴──────────────────┼──────────────────┼────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
                                                         ___          &kp LS(RSHIFT)     ___          X_MH     &kp RC(A)     &kp HOME      &kp END  
 //                                            ╰──────────────────┴──────────────────┴────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
@@ -183,9 +183,9 @@ ZMK_LAYER(num,
 //╭──────╮ ╭─────────────────┬────────────────┬───────────────────┬──────────────────┬────────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp N1            &kp N2            &kp N3             &kp N4              &kp N5            X_MT     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          X_RT
 //├──────┤ ├─────────────────┼────────────────┼───────────────────┼──────────────────┼────────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI GRAVE   &hml LALT DQT     &hml LCTRL UNDER   &hml LSHFT PLUS     &kp PIPE          X_MM     &kp UNDER     &kp MINUS     &kp PLUS      &kp EQUAL     &kp PIPE        X_RM
+    X_LM     &hml LGUI TILDE   &hml LALT DQT     &hml LCTRL UNDER   &hml LSHFT PLUS     &kp PIPE          X_MM     &kp UNDER     &kp MINUS     &kp PLUS      &kp EQUAL     &kp PIPE        X_RM
 //├──────┤ ├─────────────────┼────────────────┼───────────────────┼──────────────────┼────────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp TILDE         &kp SQT           &kp MINUS          &kp EQUAL           &kp BSLH          X_MB     &kp LBRC      &kp RBRC      &kp LBKT      &kp RBKT      &kp BSLH        X_RB
+    X_LB     &kp GRAVE         &kp SQT           &kp MINUS          &kp EQUAL           &kp BSLH          X_MB     &kp LBRC      &kp RBRC      &kp LT        &kp GT      &kp BSLH        X_RB
 //╰──────╯ ╰─────────────────┼────────────────┴───────────────────┼──────────────────┼────────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
                                                     &kp LCTRL          &kp LGUI        &kp LG(LSHIFT)     X_MH       ___           ___           ___  
 //                                            ╰───────────────────┴──────────────────┴────────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
