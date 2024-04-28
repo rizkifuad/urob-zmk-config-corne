@@ -278,9 +278,9 @@ ZMK_LAYER(sym,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI GRAVE   &hml LALT DQT    &hml LCTRL UNDER   &hml LSHFT PLUS    &kp PIPE       X_MM     NAV_LEFT      &qnav_down     &qnav_up     NAV_RIGHT     &kp PIPE        X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp TILDE         &kp SQT          &kp MINUS          &kp EQUAL          &kp BLSH       X_MB     &kp LBRC      &kp RBRC      &kp LBKT      &kp RBKT      &kp BSLH        X_RB
+    X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH        X_RB
 //╰──────╯ ╰───────────────────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                         &smart_shft   &mt LGUI BSPC  &lt SYM ESC    X_MH     &lt NUM TAB   &lt_spc FN 0  &kp RETURN
+                                                        ___          &kp LS(RSHIFT)     ___          X_MH     &kp RC(A)     &kp HOME      &kp END  
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
