@@ -38,7 +38,7 @@
 
 &lt {  // layer-tap config
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
@@ -161,7 +161,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH        X_RB
 //╰──────╯ ╰───────────────────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                         &smart_shft   &mt LGUI BSPC  &lt SYM ESC    X_MH     &lt NUM TAB   &lt_spc FN 0  &kp RETURN
+                                         &smart_shft   &hml LGUI BSPC  &lt SYM ESC    X_MH     &lt NUM TAB   &lt_spc FN 0  &kp RETURN
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯
 )
 
