@@ -118,6 +118,10 @@ SIMPLE_MORPH(comma_inner_morph, CTL, &kp LESS_THAN, &kp SEMICOLON)
 SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
 SIMPLE_MORPH(dot_inner_morph, CTL, &kp GREATER_THAN, &kp COLON)
 
+
+SIMPLE_MORPH(colon_morp, SFT, &hmr LGUI SEMICOLON, &colon_inner_morph)
+SIMPLE_MORPH(colon_inner_morph, CTL, &kp COLON, &kp EQUAL)
+
 // tap: left/right parenthesis | shft + tap: less-than/greater-than
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
