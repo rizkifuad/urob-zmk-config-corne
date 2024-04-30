@@ -72,10 +72,9 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_R THUMBS)    // "    "   "   "
 
 // long-tap action on hold, short-tap action on all interrupts
 #define MT_CORE \
-    flavor = "hold-preferred"; \
+    flavor = "tap-preferred"; \
     tapping-term-ms = <150>; \
-    hold-trigger-key-positions = <0>;
-//quick-tap-ms = <200>; \
+    quick-tap-ms = <QUICK_TAP_MS>;
 
 &mt { MT_CORE };
 
