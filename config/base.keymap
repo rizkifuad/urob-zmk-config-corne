@@ -118,10 +118,6 @@ SIMPLE_MORPH(comma_inner_morph, CTL, &kp LESS_THAN, &kp SEMICOLON)
 SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
 SIMPLE_MORPH(dot_inner_morph, CTL, &kp GREATER_THAN, &kp COLON)
 
-
-SIMPLE_MORPH(colon_morp, SFT, &hmr LGUI SEMICOLON, &colon_inner_morph)
-SIMPLE_MORPH(colon_inner_morph, CTL, &kp COLON, &kp EQUAL)
-
 // tap: left/right parenthesis | shft + tap: less-than/greater-than
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
@@ -146,7 +142,7 @@ ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp P           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI A  &hml LALT S   &hml LCTRL D   &hml LSHFT F  &kp G           X_MM     &kp H         &hmr RSHFT J  &hmr RCTRL K   &hmr RALT L  &colon_morp      X_RM
+    X_LM     &hml LGUI A  &hml LALT S   &hml LCTRL D   &hml LSHFT F  &kp G           X_MM     &kp H         &hmr RSHFT J  &hmr RCTRL K   &hmr RALT L  &hmr RGUI COLON X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH        X_RB
 //╰──────╯ ╰───────────────────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
